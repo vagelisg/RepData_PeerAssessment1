@@ -5,8 +5,6 @@ Course Project 1
 
 <!-- -->
 
-    library(dplyr)
-
     ## Warning: package 'dplyr' was built under R version 3.3.1
 
     ## 
@@ -51,7 +49,7 @@ What is mean total number of steps taken per day?
 
     hist(groupsteps$steps,xlab="Steps",ylab = "Days",main = "Average Steps",col="green")
 
-![](assigmnetGeorgiadis_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](unnamed-chunk-4-1.png)
 
 3.Calculate and report the mean and median of the total number of steps
 taken per day
@@ -69,7 +67,7 @@ What is the average daily activity pattern?
     intervalsteps <-summarise(group_by(mysteps,interval),steps=mean(steps))
     plot(intervalsteps$interval,intervalsteps$steps,type = "l",col="red",xlab = "Intervals",ylab = "Steps",main = "Average Step for 5 minute intervals")
 
-![](assigmnetGeorgiadis_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](unnamed-chunk-6-1.png)
 
 1.  Which 5-minute interval, on average across all the days in the
     dataset, contains the maximum number of steps?
@@ -122,7 +120,7 @@ the na of step valus.
     groupsteps2 <-summarise(group_by(mydatacomplete,cdate),steps=sum(steps2))
     hist(groupsteps2$steps,xlab="Steps",ylab = "Days",main = "Average Steps",col="green")
 
-![](assigmnetGeorgiadis_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](unnamed-chunk-10-1.png)
 
     steps_mean2 <- mean(groupsteps2$steps)
     steps_median2 <- median(groupsteps2$steps)
@@ -173,7 +171,7 @@ Are there differences in activity patterns between weekdays and weekends?
     plot(intervalstepsweekday$interval,intervalstepsweekday$steps,type = "l",col="red",main = "weekdays",xlab = "")
     plot(intervalstepsweekend$interval,intervalstepsweekend$steps,type = "l",col="red",main = "weekend",xlab = "")
 
-![](assigmnetGeorgiadis_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![](unnamed-chunk-13-1.png)
 
 As we can see there is more activity in the morning of weekdays, and
 during the day in weekends.
